@@ -5,5 +5,12 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+
+        <style name="NoUnderlineEditText">
+            <item name="android:background">@android:color/transparent</item>
+        </style>
+
+
+
     <style name="Theme.FitMate" parent="Base.Theme.FitMate" />
 </resources>
