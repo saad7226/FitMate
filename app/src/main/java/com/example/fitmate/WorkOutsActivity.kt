@@ -2,81 +2,70 @@ package com.example.fitmate
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import android.view.LayoutInflater
+import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import android.widget.LinearLayout
 
 class WorkOutsActivity : AppCompatActivity() {
-
-    lateinit var rcv: RecyclerView
-    lateinit var adapter: ExcercisesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_workouts)
 
-        val WorkOuts: ArrayList<Excercises> = ArrayList()
-        WorkOuts.add(Excercises(R.drawable.chestworkout))
-        WorkOuts.add(Excercises(R.drawable.backworkout))
-        WorkOuts.add(Excercises(R.drawable.shoulderworkout))
-        WorkOuts.add(Excercises(R.drawable.bicepsworkout))
-        WorkOuts.add(Excercises(R.drawable.tricepsworkout))
-        WorkOuts.add(Excercises(R.drawable.absworkout))
-        WorkOuts.add(Excercises(R.drawable.legsworkout))
+        val workouts: ArrayList<Excercises> = ArrayList()
+        workouts.add(Excercises(R.drawable.chestworkout))
+        workouts.add(Excercises(R.drawable.backworkout))
+        workouts.add(Excercises(R.drawable.shoulderworkout))
+        workouts.add(Excercises(R.drawable.bicepsworkout))
+        workouts.add(Excercises(R.drawable.tricepsworkout))
+        workouts.add(Excercises(R.drawable.absworkout))
+        workouts.add(Excercises(R.drawable.legsworkout))
 
-        rcv = findViewById(R.id.recycleview1)
-        rcv.layoutManager = LinearLayoutManager(this)
+        val linearLayoutContainer: LinearLayout = findViewById(R.id.linearLayoutContainer)
 
+        for (exercise in workouts) {
+            val itemView = LayoutInflater.from(this)
+                .inflate(R.layout.excercises_list, linearLayoutContainer, false)
+            val imageButton: ImageButton = itemView.findViewById(R.id.imageButton)
+            imageButton.setImageResource(exercise.image)
 
-        val onItemClickList = ArrayList<(Excercises) -> Unit>()
-        onItemClickList.add { navigateToChestWorkoutActivity() }
-        onItemClickList.add { navigateToBackWorkoutActivity() }
-        onItemClickList.add { navigateToShoulderWorkoutActivity() }
-        onItemClickList.add { navigateToBicepsWorkoutActivity() }
-        onItemClickList.add { navigateToTricepsWorkoutActivity() }
-        onItemClickList.add { navigateToAbsWorkoutActivity() }
-        onItemClickList.add { navigateToLegsWorkoutActivity() }
+        }
 
+        val chest:ImageView=findViewById(R.id.imageView70)
+        val back:ImageView=findViewById(R.id.imageView71)
+        val shoulder:ImageView=findViewById(R.id.imageView72)
+        val bicep:ImageView=findViewById(R.id.imageView73)
+        val tricep:ImageView=findViewById(R.id.imageView74)
+        val abs:ImageView=findViewById(R.id.imageView75)
+        val leg:ImageView=findViewById(R.id.imageView76)
 
-        adapter = ExcercisesAdapter(this, WorkOuts, onItemClickList)
-        rcv.adapter = adapter
+        chest.setOnClickListener{
+                startActivity(Intent(this,MainActivity::class.java))
+        }
+
+        back.setOnClickListener{
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        shoulder.setOnClickListener{
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        bicep.setOnClickListener{
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        tricep.setOnClickListener{
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        abs.setOnClickListener{
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        leg.setOnClickListener{
+            startActivity(Intent(this,MainActivity::class.java))
+        }
     }
 
-    private fun navigateToChestWorkoutActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigateToBackWorkoutActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigateToShoulderWorkoutActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigateToBicepsWorkoutActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigateToTricepsWorkoutActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigateToAbsWorkoutActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigateToLegsWorkoutActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
 }
+
