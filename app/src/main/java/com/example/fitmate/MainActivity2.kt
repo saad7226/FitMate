@@ -50,7 +50,7 @@ class MainActivity2 : AppCompatActivity() {
                         if (task.isSuccessful) {
                             val user = auth.currentUser
                             updateUI(user)
-                            startActivity(Intent(this, MainActivity3::class.java))
+                            startActivity(Intent(this, WorkOutsActivity::class.java))
                         } else {
                             Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
                             updateUI(null)
