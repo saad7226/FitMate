@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitMate"
         tools:targetApi="31">
+
+        <!-- Activities from both branches -->
         <activity
             android:name=".Owais"
             android:exported="false" />
@@ -19,11 +21,16 @@
             android:name=".WorkOutsActivity"
             android:exported="false" />
         <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
