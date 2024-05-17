@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkOutsActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:text="WORKOUT"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:id="@+id/scrll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="15dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView70"
+                android:layout_width="349dp"
+                android:layout_height="198dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="2dp"
+                android:clickable="true"
+                app:srcCompat="@drawable/chestworkout"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/imageView71"
+                android:layout_width="349dp"
+                android:layout_height="198dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="2dp"
+                android:clickable="true"
+                app:srcCompat="@drawable/backworkout"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/imageView72"
+                android:layout_width="349dp"
+                android:layout_height="198dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="2dp"
+                android:clickable="true"
+                app:srcCompat="@drawable/shoulderworkout"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/imageView73"
+                android:layout_width="349dp"
+                android:layout_height="198dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="2dp"
+                android:clickable="true"
+                app:srcCompat="@drawable/bicepsworkout"
+                tools:src="@tools:sample/avatars" />
+            <ImageView
+                android:id="@+id/imageView74"
+                android:layout_width="349dp"
+                android:layout_height="198dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="2dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                app:srcCompat="@drawable/tricepsworkout"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/imageView75"
+                android:layout_width="349dp"
+                android:layout_height="198dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="2dp"
+                android:layout_alignParentStart="true"
+                android:clickable="true"
+                android:layout_marginTop="16dp"
+                app:srcCompat="@drawable/absworkout"
+                tools:src="@tools:sample/avatars" />
+            <ImageView
+                android:id="@+id/imageView76"
+                android:layout_width="349dp"
+                android:layout_height="198dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="2dp"
+                android:layout_alignParentStart="true"
+                android:clickable="true"
+                android:layout_marginTop="16dp"
+                app:srcCompat="@drawable/legsworkout"
+                tools:src="@tools:sample/avatars" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
