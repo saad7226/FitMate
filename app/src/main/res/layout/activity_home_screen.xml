@@ -68,180 +68,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="186dp"
-        android:layout_below="@id/topSection"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="24dp"
-        android:scaleType="fitXY"
-        android:backgroundTint="@color/black"
-        app:srcCompat="@drawable/mainhome" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imageView2"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="12dp"
-        android:background="#0E0E0E"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="match_parent"
-                android:layout_height="37dp"
-                app:srcCompat="@drawable/diet" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Diet Plan"
-                android:textAlignment="center"
-                android:textColor="#FF9800" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="match_parent"
-                android:layout_height="37dp"
-                app:srcCompat="@drawable/water" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Water Intake"
-                android:textAlignment="center"
-                android:textColor="#FF9800" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="match_parent"
-                android:layout_height="37dp"
-                app:srcCompat="@drawable/habits" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Daily Habits"
-                android:textAlignment="center"
-                android:textColor="#FF9800" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="380dp">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imageView2"
-        android:layout_marginTop="0dp">
+<androidx.fragment.app.FragmentContainerView
+    android:id="@+id/fragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    android:layout_below="@id/topSection">
 
 
-        <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="180dp"
-            android:layout_height="176dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginBottom="2dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="70dp"
-            app:srcCompat="@drawable/bmi"
-            tools:src="@tools:sample/avatars" />
+</androidx.fragment.app.FragmentContainerView>
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="178dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/imageView16"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="#FF9800"
-            android:text="BMI Calculator"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <ImageView
-            android:id="@+id/imageView20"
-            android:layout_width="180dp"
-            android:layout_height="178dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="2dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="70dp"
-            android:src="@drawable/bmr" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/imageView20"
-            android:layout_alignEnd="@id/imageView20"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="19dp"
-            android:backgroundTint="#FF9800"
-            android:text="BMR Calculator"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <ImageView
-            android:id="@+id/imageView22"
-            android:layout_width="184dp"
-            android:layout_height="128dp"
-            android:layout_below="@+id/button3"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/tdee" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="177dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView22"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="#FF9800"
-            android:text="TDEE Calculator"
-            android:textSize="16sp" />
-
-
-
-
-
-    </RelativeLayout>
-
-</ScrollView>
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/appBar"
         android:layout_width="match_parent"
@@ -268,6 +105,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
+                    android:clickable="true"
                     app:srcCompat="@drawable/home" />
 
                 <TextView
@@ -275,6 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:clickable="true"
                     android:text="Home"
                     android:textAlignment="center" />
             </LinearLayout>
@@ -291,6 +130,7 @@
                     android:layout_width="171dp"
                     android:layout_height="31dp"
                     android:layout_gravity="center"
+                    android:clickable="true"
                     app:srcCompat="@drawable/workout" />
 
                 <TextView
@@ -299,6 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="Workout"
+                    android:clickable="true"
                     android:textAlignment="center" />
             </LinearLayout>
 

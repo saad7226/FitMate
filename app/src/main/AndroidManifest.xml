@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitMate"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".ChestWorkOut"
+            android:exported="false" />
         <!-- Activities from both branches -->
-
         <activity
             android:name=".WorkOutsActivity"
             android:exported="false" />
@@ -24,9 +24,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity2"
-            android:exported="false"></activity>
-
-
+            android:exported="false" />
         <activity
             android:name=".HomeScreen"
             android:exported="false" />

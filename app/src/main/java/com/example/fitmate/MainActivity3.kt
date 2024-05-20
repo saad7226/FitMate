@@ -57,7 +57,7 @@ class MainActivity3 : AppCompatActivity() {
                                     it.updateProfile(profileUpdates).addOnCompleteListener { profileUpdateTask ->
                                         if (profileUpdateTask.isSuccessful) {
                                             Toast.makeText(this, "User created successfully", Toast.LENGTH_SHORT).show()
-                                            startActivity(Intent(this, MainActivity::class.java))
+                                            startActivity(Intent(this, HomeScreen::class.java))
                                         } else {
                                             Toast.makeText(this, "Profile update failed", Toast.LENGTH_SHORT).show()
                                         }
